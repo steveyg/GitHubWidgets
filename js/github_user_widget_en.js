@@ -61,8 +61,7 @@ function updateUserDetails(a, b) {
     a.bio && appendToWidget(b + " .gh-widget-personal-details", "div", "bio", a.bio);
     appendToWidget(b + " .gh-widget-stats", "div", "gh-widget-item", '<div class="count"><a class="gh-widget-link" target="new" href="' + a.html_url + '/followers">' + a.followers + '</a></div><div class="stat-name">Followers</div>');
     appendToWidget(b + " .gh-widget-stats", "div", "gh-widget-item", '<div class="count"><a class="gh-widget-link" target="new" href="' + a.html_url + '/following">' + a.following + '</a></div><div class="stat-name">Following</div>');
-    appendToWidget(b + " .gh-widget-stats", "div", "gh-widget-item", '<div class="count"><a class="gh-widget-link" target="new" href="' + a.html_url + '/?tab=repositories">' + a.public_repos + '</a></div><div class="stat-name">Repositories</div>');
-    appendToWidget(b + " .gh-widget-photo", "span", "", '<img src="' + a.avatar_url + '">');
+    appendToWidget(b + " .gh-widget-photo", "span", "", '<img style="border-radius:0%" src="' + a.avatar_url + '">');
     appendToWidget(b + " .gh-widget-follow", "button", "", '<a class="gh-widget-link" target="new" href="' + a.html_url + '">Home</a>')
 }
 function updateRepoDetails(a, b) {
